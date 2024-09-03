@@ -1,0 +1,25 @@
+/* Estilos para la lista de tareas */
+.task-list {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #1c175581;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente línea si no caben en una línea */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.no-tasks {
+  text-align: center;
+  color: #252525;
+  font-size: 34px;
+  margin-top: 20px;
+}
+
+.task-card-container {
+  margin-bottom: 20px;
+}

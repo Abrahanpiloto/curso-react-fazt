@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el fondo de la aplicación */
+body {
+  background-color: #1c175581; /* Cambia el color según tu preferencia */
+  font-family: Arial, sans-serif; /* Fuente de la aplicación */
+}

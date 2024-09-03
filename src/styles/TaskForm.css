@@ -1,0 +1,55 @@
+/* Estilos para el formulario de tarea */
+.task-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  background-color: #1c175581;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.task-input,
+.task-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-input {
+  font-size: 16px;
+}
+
+.task-textarea {
+  height: 100px;
+  font-size: 16px;
+}
+.task-input:focus,
+.task-textarea:focus {
+  transform: scale(1.045); /* Expande el input un 1.5% en ambas dimensiones */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+  outline: none; /* Quita el borde azul por defecto */
+}
+.submit-button {
+  background-color: #162150bd;
+  color: white;
+  /* border: 1px solid #fff; */
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.submit-button:hover {
+  background-color: #3a57d6bd;
+  border: 1px solid #fff;
+}
