@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
 import TaskCard from "./TaskCard";
-import PropTypes from "prop-types";
 import "../styles/TaskList.css";
 
 function TaskList({ tasks, deleteTask, editTask }) {
@@ -18,15 +17,4 @@ function TaskList({ tasks, deleteTask, editTask }) {
   );
 }
 
-//---Este script PropTypes solo se agrego para eliminar los errores que daba ESLint 🤦-----
-TaskList.propTypes = {
-  tasks: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
-// ----------------------------------
 export default TaskList;
