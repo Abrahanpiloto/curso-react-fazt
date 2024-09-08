@@ -6,6 +6,42 @@
 
 /* Estilos para el fondo de la aplicación */
 body {
-  background-color: #1c175581; /* Cambia el color según tu preferencia */
-  font-family: Arial, sans-serif; /* Fuente de la aplicación */
+  background-color: #000000; /* Cambia el color según tu preferencia */
+  /* font-family: Arial, sans-serif; Fuente de la aplicación */
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
 }
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 800 */
+
+/* Estilos globales */
+
+/* Para pantallas más pequeñas (móviles) */
+/* @media (max-width: 768px) {
+  .task-list {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .task-form {
+    padding: 15px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+/* @media (max-width: 1024px) {
+  .task-list {
+    padding: 25px;
+  }
+
+  .task-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}  */

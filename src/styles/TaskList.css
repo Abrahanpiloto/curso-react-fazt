@@ -1,7 +1,7 @@
 /* Estilos para la lista de tareas */
 .task-list {
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 750px;
+  margin: 40px auto;
   padding: 30px;
   background-color: #1c175581;
   border: 3px solid #ddd;
@@ -15,11 +15,40 @@
 
 .no-tasks {
   text-align: center;
-  color: #252525;
-  font-size: 34px;
-  margin-top: 20px;
+  color: #ffffff;
+  font-size: 44px;
+  margin-top: 90px;
+  font-weight: 400;
 }
 
 .task-card-container {
   margin-bottom: 20px;
+}
+
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .task-list {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .task-form {
+    padding: 15px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  .task-list {
+    padding: 25px;
+  }
+
+  .task-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }

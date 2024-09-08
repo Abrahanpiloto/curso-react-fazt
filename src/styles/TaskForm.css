@@ -8,6 +8,7 @@
   background-color: #1c175581;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-top: 6rem;
 }
 
 .task-input,
@@ -52,4 +53,32 @@
 .submit-button:hover {
   background-color: #3a57d6bd;
   border: 1px solid #fff;
+}
+
+/* Para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .task-list {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .task-form {
+    padding: 15px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  .task-list {
+    padding: 25px;
+  }
+
+  .task-card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
