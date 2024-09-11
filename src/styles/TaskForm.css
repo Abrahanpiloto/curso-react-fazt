@@ -13,12 +13,14 @@
 
 .task-input,
 .task-textarea {
+  background-color: #fff;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: black;
 }
 
 .task-input {

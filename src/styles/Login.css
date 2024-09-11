@@ -15,12 +15,13 @@ body {
 }
 
 .login-box {
-  background-color: #1e1e1e; /* Fondo del formulario */
+  background-color: #1c175581; /* Fondo del formulario */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(228, 226, 226, 0.3);
   max-width: 400px;
   width: 100%;
+  border: 2px solid white;
 }
 
 h2 {
@@ -30,7 +31,7 @@ h2 {
   color: #ffffff; /* Título en blanco */
 }
 
-button {
+.button-login {
   background-color: #4285f4; /* Color de Google */
   color: #ffffff;
   border: none;

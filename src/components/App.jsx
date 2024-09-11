@@ -1,8 +1,18 @@
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
 import Modal from "../components/Modal";
+import Login from "../components/Login";
+import Logout from "../components/Logout";
+import { auth } from "../../firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { tasks as data } from "../tasks";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+// import { tasks as data } from "../tasks";
 import {
   collection,
   addDoc,
@@ -20,6 +30,15 @@ function App() {
   const [taskToEdit, setTaskToEdit] = useState(null);
   const [taskToDelete, setTaskToDelete] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [user, setUser] = useState(null);
+
+  // Verifica si hay un usuario autenticado al cargar la aplicación
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe(); // Limpia el listener cuando se desmonte el componente
+  }, []);
 
   // Obtener tareas desde Firestore al cargar la página:
   useEffect(() => {
@@ -89,22 +108,44 @@ function App() {
   };
 
   return (
-    <div>
-      <TaskForm
-        createTask={createTask}
-        taskToEdit={taskToEdit}
-        updateTask={updateTask}
-      />
-      <Modal
-        show={showModal}
-        onClose={cancelDelete}
-        onConfirm={deleteTask}
-        taskId={taskToDelete} //pasar taskId al modal
-        message="¿Estás seguro de que deseas eliminar esta tarea?"
-      />
+    <Router>
+      <Routes>
+        {/* Página de login */}
+        <Route path="/" element={user ? <Navigate to="/tasks" /> : <Login />} />
 
-      <TaskList tasks={tasks} deleteTask={confirmDelete} editTask={editTask} />
-    </div>
+        {/* Página de tareas, accesible solo si el usuario está autenticado */}
+        <Route
+          path="/tasks"
+          element={
+            user ? (
+              <>
+                <Logout />
+                <TaskForm
+                  createTask={createTask}
+                  taskToEdit={taskToEdit}
+                  updateTask={updateTask}
+                />
+                <Modal
+                  show={showModal}
+                  onClose={cancelDelete}
+                  onConfirm={deleteTask}
+                  taskId={taskToDelete} //pasar taskId al modal
+                  message="¿Estás seguro de que deseas eliminar esta tarea?"
+                />
+
+                <TaskList
+                  tasks={tasks}
+                  deleteTask={confirmDelete}
+                  editTask={editTask}
+                />
+              </>
+            ) : (
+              <Navigate to="/" /> // Redirige a la página de login si no está autenticado
+            )
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
