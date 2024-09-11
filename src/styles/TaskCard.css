@@ -3,7 +3,7 @@
   background-color: #000000bd;
   border: 2px solid #fff;
   border-radius: 8px;
-  padding: 15px;
+  padding: 25px;
   margin-bottom: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -12,7 +12,7 @@
 
 .task-card:hover {
   /* transform: translateY(-5px); */
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   box-shadow: 0 8px 16px rgba(204, 203, 203, 0.582);
   border: 3px solid #fff;
 }
@@ -36,18 +36,66 @@
   margin-top: 0.5rem;
 }
 
-/* Para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-  .task-card {
-    padding: 10px;
-    margin-bottom: 10px;
-  }
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 1024px) {
-  .task-card {
-    padding: 10px;
-    margin-bottom: 10px;
-  }
+.button-card-delete {
+  display: inline-block;
+  padding: 4px 13px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #fffefe;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-card-delete:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.button-card-delete :active {
+  /* background-color: #fcf414; */
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.button-card-edit {
+  display: inline-block;
+  padding: 7px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5437f5;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #fffefe;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-card-edit:hover {
+  background-color: #fff;
+  color: #5437f5;
+  border: 2px solid #5437f5;
+  box-shadow: 5px 5px 0px #5437f5;
+}
+
+.button-card-edit :active {
+  /* background-color: #fcf414; */
+  box-shadow: none;
+  transform: translateY(4px);
 }

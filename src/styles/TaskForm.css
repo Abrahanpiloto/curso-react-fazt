@@ -37,10 +37,10 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
   outline: none; /* Quita el borde azul por defecto */
 }
-.submit-button {
+/* .submit-button {
   background-color: #162150bd;
   color: white;
-  /* border: 1px solid #fff; */
+  
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -55,32 +55,32 @@
 .submit-button:hover {
   background-color: #3a57d6bd;
   border: 1px solid #fff;
+} */
+
+.submit-button {
+  display: inline-block;
+  padding: 4px 13px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #28862c;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #fffefe;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-/* Para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-  .task-list {
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .task-form {
-    padding: 15px;
-  }
-
-  .submit-button {
-    font-size: 14px;
-  }
+.submit-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
 }
 
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 1024px) {
-  .task-list {
-    padding: 25px;
-  }
-
-  .task-card {
-    padding: 10px;
-    margin-bottom: 10px;
-  }
+.submit-button:active {
+  box-shadow: none;
+  transform: translateY(4px);
 }
