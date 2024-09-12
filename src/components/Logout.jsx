@@ -1,5 +1,6 @@
 import { auth } from "../../firebase/firebase";
 import { signOut } from "firebase/auth";
+import "../styles/Logout.css";
 const Logout = () => {
   // Función para cerrar sesión
   const handleLogout = async () => {
@@ -11,9 +12,9 @@ const Logout = () => {
   };
   return (
     <div className="header">
-      <h1>Tus Tareas</h1>
+      <h1 className="header-title">Tasks</h1>
       <button onClick={handleLogout} className="logout-button">
-        Cerrar Sesión
+        Logout
       </button>
     </div>
   );

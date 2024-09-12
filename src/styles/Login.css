@@ -1,9 +1,10 @@
 /* styles/Login.css */
 
 body {
+  background-color: #121212; /* Fondo oscuro */
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #121212; /* Fondo oscuro */
+
   color: #e0e0e0; /* Texto claro */
 }
 
@@ -48,6 +49,8 @@ button:hover {
 } */
 /* From Uiverse.io by Yaya12085 */
 button {
+  margin: 0 auto;
+
   max-width: 320px;
   display: flex;
   padding: 0.5rem 1.4rem;

@@ -6,12 +6,13 @@
 
 /* Estilos para el fondo de la aplicación */
 body {
-  background-color: #1d1c1ce0; /* Cambia el color según tu preferencia */
-  /* font-family: Arial, sans-serif; Fuente de la aplicación */
+  /* background-color: #1d1c1ce0; */
+  background-image: url("../images/roraima.jpg"); /* Ruta de la imagen */
+  background-size: cover; /* Hace que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   font-family: "SUSE", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>; */
+
   font-style: normal;
 }
-/* <uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 100 to 800 */

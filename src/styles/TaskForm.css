@@ -8,7 +8,7 @@
   background-color: #1c175581;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 .task-input,
@@ -37,25 +37,6 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
   outline: none; /* Quita el borde azul por defecto */
 }
-/* .submit-button {
-  background-color: #162150bd;
-  color: white;
-  
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.submit-button:hover {
-  background-color: #3a57d6bd;
-  border: 1px solid #fff;
-} */
 
 .submit-button {
   display: inline-block;
@@ -65,7 +46,7 @@
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #28862c;
+  background-color: #5437f5;
   border: 2px solid #000;
   border-radius: 10px;
   box-shadow: 5px 5px 0px #fffefe;
@@ -75,9 +56,9 @@
 
 .submit-button:hover {
   background-color: #fff;
-  color: #ff5252;
-  border: 2px solid #ff5252;
-  box-shadow: 5px 5px 0px #ff5252;
+  color: #050000b6;
+  border: 2px solid #1c175581;
+  box-shadow: 5px 5px 0px #1c175581;
 }
 
 .submit-button:active {

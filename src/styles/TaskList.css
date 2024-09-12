@@ -24,31 +24,3 @@
 .task-card-container {
   margin-bottom: 20px;
 }
-
-/* Para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
-  .task-list {
-    padding: 20px;
-    max-width: 100%;
-  }
-
-  .task-form {
-    padding: 15px;
-  }
-
-  .submit-button {
-    font-size: 14px;
-  }
-}
-
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 1024px) {
-  .task-list {
-    padding: 25px;
-  }
-
-  .task-card {
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-}
