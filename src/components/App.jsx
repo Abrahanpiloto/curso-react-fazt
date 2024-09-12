@@ -12,7 +12,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-// import { tasks as data } from "../tasks";
+
 import {
   collection,
   addDoc,
@@ -108,44 +108,61 @@ function App() {
   };
 
   return (
-    <Router>
-      <Routes>
-        {/* Página de login */}
-        <Route path="/" element={user ? <Navigate to="/tasks" /> : <Login />} />
+    <div
+      className={
+        location.pathname === "/" ? "login-background" : "tasks-background"
+      }
+    >
+      <Router>
+        <Routes>
+          {/* Página de login */}
+          <Route
+            path="/"
+            element={user ? <Navigate to="/tasks" /> : <Login />}
+          />
 
-        {/* Página de tareas, accesible solo si el usuario está autenticado */}
-        <Route
-          path="/tasks"
-          element={
-            user ? (
-              <>
-                <Logout />
-                <TaskForm
-                  createTask={createTask}
-                  taskToEdit={taskToEdit}
-                  updateTask={updateTask}
-                />
-                <Modal
-                  show={showModal}
-                  onClose={cancelDelete}
-                  onConfirm={deleteTask}
-                  taskId={taskToDelete} //pasar taskId al modal
-                  message="¿Estás seguro de que deseas eliminar esta tarea?"
-                />
+          {/* Página de tareas, accesible solo si el usuario está autenticado */}
+          <Route
+            path="/tasks"
+            element={
+              user ? (
+                <>
+                  <div className="container-app">
+                    <div className="form-container">
+                      <TaskForm
+                        createTask={createTask}
+                        taskToEdit={taskToEdit}
+                        updateTask={updateTask}
+                      />
+                    </div>
 
-                <TaskList
-                  tasks={tasks}
-                  deleteTask={confirmDelete}
-                  editTask={editTask}
-                />
-              </>
-            ) : (
-              <Navigate to="/" /> // Redirige a la página de login si no está autenticado
-            )
-          }
-        />
-      </Routes>
-    </Router>
+                    <div className="list-container">
+                      <div className="container-logout">
+                        <Logout />
+                      </div>
+                      <TaskList
+                        tasks={tasks}
+                        deleteTask={confirmDelete}
+                        editTask={editTask}
+                      />
+                      <Modal
+                        show={showModal}
+                        onClose={cancelDelete}
+                        onConfirm={deleteTask}
+                        taskId={taskToDelete} //pasar taskId al modal
+                        message="¿Estás seguro de que deseas eliminar esta tarea?"
+                      />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <Navigate to="/" /> // Redirige a la página de login si no está autenticado
+              )
+            }
+          />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

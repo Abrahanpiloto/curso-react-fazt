@@ -1,19 +1,15 @@
-.header {
-  display: flex;
+.container-logout {
+  margin-left: 40rem;
+  margin-top: 1.5rem;
+  /* display: flex;
   justify-content: space-around;
   border: 2px solid white;
   max-width: 82rem;
-  margin: 0 auto;
-  margin-top: 2rem;
-}
-
-.header-title {
-  color: white;
-  /* font-size: 3rem; */
+  margin: 0 auto; */
+  /* margin-top: 2rem; */
 }
 
 .logout-button {
-  margin-left: 75rem;
   border: 2px solid rgb(247, 7, 7);
   display: inline-block;
   padding: 4px 13px;

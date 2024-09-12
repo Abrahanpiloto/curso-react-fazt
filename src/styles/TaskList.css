@@ -3,10 +3,10 @@
   max-width: 750px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #1c175581;
-  border: 3px solid #ddd;
+  /* background-color: #1c175581;
+  border: 3px solid #ddd; */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   display: flex;
   flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente línea si no caben en una línea */
   justify-content: center; /* Centra las tarjetas horizontalmente */

@@ -2,9 +2,8 @@ import { useState } from "react";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
-import venezuela2 from "../images/venezuela2.jpg";
-import venezuela1 from "../images/venezuela1.jpg";
-import roraima from "../images/roraima.jpg";
+import beach from "../images/beach.jpg";
+import flag from "../images/flag.jpg";
 import merida from "../images/merida.jpg";
 import "../styles/Carrusel.css";
 import "../styles/Login.css";
@@ -24,9 +23,9 @@ const Login = () => {
   };
 
   return (
-    <div className="row container p-4">
-      <div className="col-md-8">
-        <div id="carouselExampleIndicators" className="carousel slide">
+    <div className="row container p-4 h-100">
+      <div className="col-md-8 h-100 d-flex align-items-center justify-content-center">
+        <div id="carouselExampleIndicators" className="carousel slide h-100">
           <div className="carousel-indicators">
             <button
               type="button"
@@ -48,25 +47,24 @@ const Login = () => {
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
           </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={venezuela2} alt="" className="image-size" />
+          <div className="carousel-inner h-100">
+            <div className="carousel-item h-100">
+              <img src={flag} alt="" className="image-size d-block rounded-4" />
             </div>
-            <div className="carousel-item">
-              <img src={roraima} alt="" className="image-size" />
+            <div className="carousel-item active h-100">
+              <img
+                src={beach}
+                alt=""
+                className="image-size d-block rounded-4"
+              />
             </div>
-            <div className="carousel-item active">
-              <img src={venezuela1} alt="" className="image-size" />
-            </div>
-            <div className="carousel-item">
-              <img src={merida} alt="" className="image-size" />
+            <div className="carousel-item h-100">
+              <img
+                src={merida}
+                alt=""
+                className="image-size d-block rounded-4"
+              />
             </div>
           </div>
           <button
@@ -96,7 +94,7 @@ const Login = () => {
         </div>
       </div>
       {/* esta seccion sera para el login */}
-      <div className="col-md-4">
+      <div className="col-md-4 h-100 d-flex align-items-center justify-content-center">
         <div className="login-box">
           <h2>Login</h2>
           <button className="button" onClick={handleGoogleLogin}>

@@ -6,13 +6,27 @@
 
 /* Estilos para el fondo de la aplicación */
 body {
-  /* background-color: #1d1c1ce0; */
-  background-image: url("../images/roraima.jpg"); /* Ruta de la imagen */
-  background-size: cover; /* Hace que la imagen cubra todo el fondo */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
   font-family: "SUSE", sans-serif;
   font-optical-sizing: auto;
-
+  height: 100%;
   font-style: normal;
+}
+
+/* Fondo para la página de tareas */
+.tasks-background {
+  height: 100vh;
+  background: url("../images/roraima.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container-app {
+  display: flex;
+  gap: 3rem;
+  border: 2px solid red;
+  height: 100%;
+}
+
+.form-container {
+  width: 35rem;
+  border: 4px solid green;
 }
