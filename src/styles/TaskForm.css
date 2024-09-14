@@ -1,17 +1,16 @@
 /* Estilos para el formulario de tarea */
-.task.container {
-}
 
 .task-form {
   max-width: 450px;
-  margin: 20px auto;
+  margin: 30px auto;
+
   padding: 20px;
   border: 3px solid #fff;
   border-radius: 8px;
   background-color: #202020d5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 7.5rem;
 }
 
 .task-input,
@@ -52,7 +51,7 @@
   background-color: #5437f5;
   border: 2px solid #000;
   border-radius: 10px;
-  box-shadow: 5px 5px 0px #fffefe;
+  box-shadow: 3px 3px 0px #fffefe;
   transition: all 0.3s ease;
   cursor: pointer;
 }

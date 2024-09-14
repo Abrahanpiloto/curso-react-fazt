@@ -24,6 +24,7 @@ import {
 // import { db } from "../firebase"; // Asegúrate de que el archivo de configuración esté bien ubicado
 import { db } from "../../firebase/firebase";
 import "../styles/App.css";
+import "../styles/Pagination.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -31,6 +32,10 @@ function App() {
   const [taskToDelete, setTaskToDelete] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [user, setUser] = useState(null);
+
+  // Estado para paginación
+  const [currentPage, setCurrentPage] = useState(1);
+  const tasksPerPage = 4;
 
   // Verifica si hay un usuario autenticado al cargar la aplicación
   useEffect(() => {
@@ -107,6 +112,13 @@ function App() {
     setTaskToEdit(null); // Reinicia el formulario después de la edición
   };
 
+  // Manejo de paginación
+  const indexOfLastTask = currentPage * tasksPerPage;
+  const indexOfFirstTask = indexOfLastTask - tasksPerPage;
+  const currentTasks = tasks.slice(indexOfFirstTask, indexOfLastTask);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <div
       className={
@@ -141,7 +153,7 @@ function App() {
                         <Logout />
                       </div>
                       <TaskList
-                        tasks={tasks}
+                        tasks={currentTasks}
                         deleteTask={confirmDelete}
                         editTask={editTask}
                       />
@@ -152,6 +164,44 @@ function App() {
                         taskId={taskToDelete} //pasar taskId al modal
                         message="¿Estás seguro de que deseas eliminar esta tarea?"
                       />
+                      {tasks.length > tasksPerPage && (
+                        <div className="pagination">
+                          {/* Botón de Anterior */}
+                          <button
+                            onClick={() => paginate(currentPage - 1)}
+                            disabled={currentPage === 1} // Deshabilitar si estamos en la primera página
+                          >
+                            Anterior
+                          </button>
+
+                          {/* Botones de las páginas */}
+                          {Array.from(
+                            { length: Math.ceil(tasks.length / tasksPerPage) },
+                            (_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => paginate(index + 1)}
+                                className={
+                                  index + 1 === currentPage ? "active" : ""
+                                }
+                              >
+                                {index + 1}
+                              </button>
+                            )
+                          )}
+
+                          {/* Botón de Siguiente */}
+                          <button
+                            onClick={() => paginate(currentPage + 1)}
+                            disabled={
+                              currentPage ===
+                              Math.ceil(tasks.length / tasksPerPage)
+                            } // Deshabilitar si estamos en la última página
+                          >
+                            Siguiente
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </>

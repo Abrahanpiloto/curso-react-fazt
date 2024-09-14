@@ -1,0 +1,23 @@
+.pagination {
+  position: fixed; /* Se mantendrá siempre en la parte inferior de la ventana */
+  bottom: 0; /* Fija el div al borde inferior */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Espaciado en la parte superior e inferior */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.pagination button {
+  background-color: #2e1edb;
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

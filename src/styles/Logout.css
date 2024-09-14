@@ -21,7 +21,7 @@
   background-color: #5437f5;
   border: 2px solid #000;
   border-radius: 10px;
-  box-shadow: 5px 5px 0px #fffefe;
+  box-shadow: 3px 3px 0px #fffefe;
   transition: all 0.3s ease;
   /* cursor: pointer; */
 }
