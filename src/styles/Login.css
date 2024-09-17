@@ -14,13 +14,13 @@
 }
 
 .login-box {
-  background-color: #1c1755ce;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(228, 226, 226, 0.3);
-  max-width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  border: 2px solid white;
+  max-width: 400px;
+  text-align: center;
 }
 
 h2 {
@@ -31,35 +31,106 @@ h2 {
 }
 
 /* From Uiverse.io by Yaya12085 */
-button {
-  margin: 0 auto;
-  max-width: 320px;
-  display: flex;
-  padding: 0.3rem 1.4rem;
-  font-size: 0.855rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  gap: 0.75rem;
-  color: rgb(65, 63, 63);
+/* Título del formulario */
+.login-box h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #202124;
+}
+
+/* Input fields */
+.login-box input {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #202124;
   background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Cambia el borde cuando el input está activo o enfocado */
+.login-box input:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+/* Botón para Login/Registro */
+.login-box .button {
+  width: 100%;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: #4285f4;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.6s ease;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
-.button svg {
-  height: 20px;
+/* Efecto hover para el botón */
+.login-box .button:hover {
+  background-color: #357ae8;
 }
 
-button:hover {
-  transform: scale(1.02);
+/* Enlace de alternancia entre Login/Registro */
+.login-box .toggle-link {
+  color: #656769;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 14px;
+
+  font-family: "Roboto", sans-serif;
+  transition: color 0.2s ease;
 }
-p {
-  color: #ff5252; /* Color para mensajes de error */
-  text-align: center;
+
+.login-box .toggle-link:hover {
+  color: #357ae8;
+}
+
+/* Mensaje de error */
+.login-box p {
+  color: #d93025;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .row.container {
+    padding: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px; /* Deja espacio para el icono */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.password-toggle svg {
+  font-size: 12px;
 }

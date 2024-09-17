@@ -46,8 +46,8 @@
   display: inline-block;
   padding: 4px 10px;
   font-size: 8px;
-  /* font-weight: bold; */
-  /* font-weight: 900; */
+  font-weight: bold;
+  /* font-weight: 600; */
   text-align: center;
   text-decoration: none;
   color: #fff;
