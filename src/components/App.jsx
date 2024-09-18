@@ -69,7 +69,7 @@ function App() {
     const docRef = await addDoc(collection(db, "tasks"), newTask);
 
     //Actualiza el estado con la nueva tarea:
-    setTasks([...tasks, { id: docRef.id, ...newTask }]);
+    setTasks([{ id: docRef.id, ...newTask }, ...tasks]);
   };
 
   // Función que solicita confirmación para eliminar una tarea:
