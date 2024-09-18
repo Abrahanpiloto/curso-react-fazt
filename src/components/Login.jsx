@@ -80,15 +80,15 @@ const Login = () => {
             ></button>
           </div>
           <div className="carousel-inner h-100">
-            <div className="carousel-item h-100">
-              <img src={flag} alt="" className="image-size d-block rounded-4" />
-            </div>
             <div className="carousel-item active h-100">
               <img
                 src={beach}
                 alt=""
                 className="image-size d-block rounded-4"
               />
+            </div>
+            <div className="carousel-item h-100">
+              <img src={flag} alt="" className="image-size d-block rounded-4" />
             </div>
             <div className="carousel-item h-100">
               <img
